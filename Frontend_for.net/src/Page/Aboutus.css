@@ -1,0 +1,57 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height of the main content area */
+    background-image: url('D:\CDAC\Vehicle_configurator_Git_Repo\Vehicle_Configurator_F\public\images\aboutus1.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    color: #fff; /* Set text color to white */
+  }
+  
+  /* Remaining CSS styles */
+  
+  
+  .about-us {
+    text-align: center;
+    margin-bottom: 50px; /* Adjust the spacing between the "About Us" section and the other sections */
+    color:rgb(255, 255, 255);
+  }
+  
+  .about-title {
+    font-size: 2em; /* Adjust the font size */
+    font-weight: bold; /* Make the text bold */
+    /* Add any other styles you want */
+    color:black;
+  }
+  
+  .about-text {
+    /* Styles for the text in the About Us section */
+    color:rgb(255, 255, 255);
+  }
+  
+  .section {
+    /* Common styles for each section */
+    color:black;
+  }
+  
+  .section-title {
+    /* Styles for the title of each section */
+    color:black;
+  }
+  
+  .section-text {
+    /* Styles for the text content of each section */
+    color:black;
+  }
+  
+  .dropdown-content {
+    /* Styles for the dropdown content */
+    color:rgb(255, 255, 255);
+  }
+  
+  .dropdown-text {
+    /* Styles for the text inside the dropdown content */
+    color:black;
+  }

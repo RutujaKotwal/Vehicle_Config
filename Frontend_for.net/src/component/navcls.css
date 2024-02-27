@@ -1,0 +1,17 @@
+.navcls{
+    
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+
+}
+.navcls:hover {
+    background-color: #000000; /* Darker blue on hover */
+  }
+.txt{
+    padding-bottom:7px;
+    color: rgb(154, 145, 145);
+}
+.txt:hover {
+    color:  rgb(253, 253, 253); /* your desired hover color */;
+}

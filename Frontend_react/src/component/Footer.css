@@ -1,0 +1,19 @@
+footer {
+   
+  background-color: #000000;
+    color: #dadada;
+    padding: 5px;
+    text-align: center;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+/* Footer Styling */
+.footer-container {
+  bottom: 0;
+     /* Dark blue text color */
+  }
+  
+  footer:hover {
+    color: #ffffff; /* Darker blue on hover */
+  }

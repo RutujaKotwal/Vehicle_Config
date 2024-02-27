@@ -1,0 +1,39 @@
+.headerStyle {
+  background-color: #000000; /* Blue background */
+  color: #ffffff; /* White text color */
+  margin: 10;
+  padding: 0%; /* Adding padding to the container */
+}
+
+.headerStyle:hover {
+  background-color: #000000; /* Darker blue on hover */
+}
+.header-h1 {
+  font-family: 'Playfair Display', sans-serif; /* Replace 'Your Desired Font' with the actual font you want to use */
+  /* Additional styling properties if needed */
+}
+.logo {
+  width: 200px;
+  height: 60px;
+  border: none;
+  margin: 0 10px; /* Adjusting margin */
+  padding: 0;
+  padding-top:0%;
+}
+
+.cmp_name {
+  text-align: center;
+  align-items: center;
+}
+
+/* Add specific styles for smaller screens */
+@media (max-width: 575.98px) {
+  .headerStyle {
+    padding: 5px; /* Reduce padding for smaller screens */
+  }
+
+  .logo {
+    margin: 0; /* Remove margin for smaller screens */
+  }
+}
+/* ------------------------------- */
