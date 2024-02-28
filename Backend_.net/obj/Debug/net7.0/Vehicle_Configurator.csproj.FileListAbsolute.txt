@@ -128,3 +128,7 @@ D:\CDAC\Git_Final_Vehicle_Project\Backend_.net\obj\Debug\net7.0\refint\Vehicle_C
 D:\CDAC\Git_Final_Vehicle_Project\Backend_.net\obj\Debug\net7.0\Vehicle_Configurator.pdb
 D:\CDAC\Git_Final_Vehicle_Project\Backend_.net\obj\Debug\net7.0\Vehicle_Configurator.genruntimeconfig.cache
 D:\CDAC\Git_Final_Vehicle_Project\Backend_.net\obj\Debug\net7.0\ref\Vehicle_Configurator.dll
+D:\CDAC\Git_Final_Vehicle_Project\Backend_.net\bin\Debug\net7.0\MailKit.dll
+D:\CDAC\Git_Final_Vehicle_Project\Backend_.net\bin\Debug\net7.0\MimeKit.dll
+D:\CDAC\Git_Final_Vehicle_Project\Backend_.net\bin\Debug\net7.0\NETCore.MailKit.dll
+D:\CDAC\Git_Final_Vehicle_Project\Backend_.net\bin\Debug\net7.0\BouncyCastle.Crypto.dll

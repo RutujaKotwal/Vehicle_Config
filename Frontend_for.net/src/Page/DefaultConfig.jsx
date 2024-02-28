@@ -16,6 +16,7 @@ const DefaultConfig = () => {
   sessionStorage.setItem('price',price);
   const Modelname = sessionStorage.getItem("Model_Name");
   const Model_id =sessionStorage.getItem("Model_id");
+  sessionStorage.setItem('Imagedis',Imagedis);
   console.log(" this is imagename"+Modelname);
   const handleConfigure = (event) => {
     navigate(`/Configure`);

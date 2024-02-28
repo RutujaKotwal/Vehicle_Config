@@ -9,6 +9,7 @@ export default function Contactus() {
     setDetails((eml) => ({ ...eml, [event.target.name]: event.target.value }));
     setMsgBody((msg) => ({ ...msg, [event.target.name]: event.target.value }));
     console.log(getdetails);
+    console.log(msgBody);
   };
 
   const sendEmail = (event) => {
@@ -16,12 +17,10 @@ export default function Contactus() {
 
     console.log(JSON.stringify(getdetails));
 
-    fetch("http://localhost:8080/sendMail", {
+    fetch("http://localhost:8080/api/sendMail", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...getdetails, msgBody: msgBody.msgBody }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({...getdetails,msgBody:msgBody.msgBody}),
     })
       .then((data) => {
         console.log(data);
@@ -79,7 +78,7 @@ export default function Contactus() {
           </label>
           <input
             type="email"
-            name="useremail"
+            name="email"
             className="form-control"
             placeholder="Enter your email"
             required

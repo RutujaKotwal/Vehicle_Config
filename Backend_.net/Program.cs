@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Vehicle_Configurator.DbRepos;
 using Vehicle_Configurator.Repository;
 using Microsoft.EntityFrameworkCore;
-
+using Vehicle_Configurator.Models;
 
 namespace Vehicle_Configurator
 {
@@ -15,7 +15,7 @@ namespace Vehicle_Configurator
 
             // Add services to the container.
             builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-
+            builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 
             builder.Services.AddScoped<IMfgRepository, MfgRepository>();
             builder.Services.AddScoped<ISegmentRepository, SegmentRepository>();
@@ -24,6 +24,7 @@ namespace Vehicle_Configurator
             builder.Services.AddScoped<IInvoiceRepository, InvoiceRepository>();
             builder.Services.AddScoped<IAlternatecomponentmasterRepository, AlternatecomponentRepository>();
             builder.Services.AddScoped<IVehicleDetailRepository, VehicleDetailRepository>();
+            builder.Services.AddScoped<IMailService, MailService>();
             builder.Services.AddDbContext<ScottDbContext>(options =>
             options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")));
 

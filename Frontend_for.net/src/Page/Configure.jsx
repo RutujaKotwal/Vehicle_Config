@@ -10,7 +10,7 @@ function Configure() {
     const [selectedData, setSelectedData] = useState("std");
     const [currentModelId, setCurrentModelId] = useState(null);
     const Model_id =sessionStorage.getItem("Model_id");
-    
+    const Imagedis = sessionStorage.getItem("Imagedis");
     const handleButtonClick = (data) => {
       console.log('Selected Data:', data);
       setSelectedData(data);
@@ -41,26 +41,65 @@ function Configure() {
   }, [Model_id]);
 
     return (
-        <div>
-           <div>
-      <h2>Core Options</h2>
-      <ul>
-        {coreOptions.map((option, index) => (
-          <li key={index}>{option}</li>
-        ))}
-      </ul>
-      </div> 
-      <div>
-      <DynConfig Model_id={Model_id} sltdata={selectedData}></DynConfig>
+      <div className="card mb-3 custom-card">
+      <div className="row g-0">
+        <div className="col-md-4">
+          <img
+            src={Imagedis} // Replace with your actual image URL
+            className="img-fluid rounded-start"
+            alt="Your Image"
+          />
+        </div>
+        <div className="col-md-8">
+          <div className="card-body">
+            <h2>Core Options</h2>
+            <ul>
+              {/* Replace with your actual coreOptions */}
+              {coreOptions.map((option, index) => (
+                <li key={index}>{option}</li>
+              ))}
+            </ul>
+            <div>
+              <DynConfig Model_id={Model_id} sltdata={selectedData}></DynConfig>
+            </div>
+            <div>
+              <button
+                className="btn btn-success"
+                onClick={() => { handleButtonClick("std") }}
+              >
+                Standard
+              </button>
+              <button
+                className="btn btn-success"
+                onClick={() => { handleButtonClick("interior") }}
+              >
+                Interior
+              </button>
+              <button
+                className="btn btn-success"
+                onClick={() => { handleButtonClick("exterior") }}
+              >
+                Exterior
+              </button>
+              <button
+                className="btn btn-danger"
+                onClick={handleCancel}
+              >
+                Cancel
+              </button>
+              <button
+                className="btn btn-success"
+                onClick={handleConfirm}
+              >
+                Confirm Order
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-      <button variant="contained" color="success" style={{ marginRight: 20, marginBottom: 90 }} onClick={()=>{handleButtonClick("std")}}>Standard</button>
-      <button variant="contained" color="success" style={{ marginRight: 20, marginBottom: 90 }} onClick={()=>{handleButtonClick("interior")}}>Interior</button>
-      <button variant="contained" color="success" style={{ marginRight: 20, marginBottom: 90 }} onClick={()=>{handleButtonClick("exterior")}}>Exterior</button>
-      <button variant="contained" color="success" style={{ marginRight: 20, marginBottom: 90 }} onClick={handleCancel}>Cancel</button>
-      <button variant="contained" color="success" style={{ marginRight: 20, marginBottom: 90 }} onClick={handleConfirm}>Confirm Order</button>
-      </div> </div>
+    </div>
     )
 }
+
 
 export default Configure
